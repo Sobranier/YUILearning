@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<title>YUI CSS Grids Response</title>
+<link rel="stylesheet"
+	href="http://yui.yahooapis.com/3.5.0/build/cssgrids/cssgrids-min.css">
+<style>
+/*default*/
+body{margin:auto;width:960px;}
+.nav{width:240px;}
+.main{width:720px;}
+
+/*phone*/
+@media screen and (max-width: 480px){
+	body{margin:inherit;width:inherit;}
+	.yui3-u{display:block;}
+	.nav{width:100%;}
+	.main{width:100%;}
+}
+
+/*pad*/
+@media screen and (min-width: 481px) and (max-width:960px){
+	body{margin:inhert;width:inhert;}
+	.layout{padding-left:240px;}
+	.nav{margin-left:-240px;width:240px;}
+	.main{width:99%;}
+}
+
+/*max*/
+@media screen and (min-width:961px){
+	body{margin:auto;width:960px;}
+	.nav{width:240px;}
+	.main{width:720px;}
+}
+</style>
+
+<div class="yui3-g layout">
+	<div class="yui3-u nav">
+		<ul>
+			<li><a href="#">Cha 1</a></li>
+			<li><a href="#">Cha 2</a></li>
+			<li><a href="#">Cha 3</a></li>
+		</ul>
+	</div>
+	<div class="yui3-u main">
+		<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+		<p>XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+	</div>
+</div>
+
