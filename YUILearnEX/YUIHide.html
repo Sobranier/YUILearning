@@ -1,0 +1,31 @@
+<!DOCTYTPE html>
+<title>Hiding an element in response to a click</title>
+<style>
+	#demo,#demo2,#demo3{width:100px;height:100px;boder:1px #000 solid;background:#d72;}
+</style>
+
+<button id = "hide">Hide</button>
+<div id = "demo"></div>
+<button id = "hideslow">HideSlow</button>
+<div id = "demo2"></div>
+<button id = "hideslowly">HideSlowly</button>
+<div id = "demo3"></div>
+
+<script src = "http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js"></script>
+<script>
+	YUI().use('node','transition',function(Y){
+		var hideButton = Y.one('#hide'),
+			demo = Y.one('#demo');
+		hideButton.on('click',function(){
+			demo.hide();
+		});
+
+		Y.one("#hideslow").on('click',function(){
+			Y.one('#demo2').hide(true);
+		})
+
+		Y.one('#hideslowly').on('click',function(){
+			Y.one('#demo3').hide({duration:2.0});
+		});
+	});
+</script>
