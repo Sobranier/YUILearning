@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<title>模块加载测试</title>
+<div id="demo" style="height:100px;width:100px;background-color:blue;"></div>
+<div id="tt" style="height:200px;width:100px;background-color:white;">hello</div>
+<div id="say1" style="height:100px;width:100px;background-color:blue;">press</div>
+<div id="say2" style="height:100px;width:100px;border:1px solid black">nihao<div>
+<script src="http://yui.yahooapis.com/3.5.0/build/yui/yui-min.js"></script>
+<script>
+	
+	YUI({
+		modules:{
+			'hello':{
+				fullpath:'hello.js',
+				requires:['node-base']
+			}
+		}	
+		}).use('hello',function(Y){		//注意这里不需要写node-base这样保证了hello会在node-base之后加载
+		Y.one('#demo').setHTML(Y.Hello.sayHello());
+		Y.Hello.sayHi('#tt');
+		Y.Hello.press('#say1','#say2');
+	});
+
+</script>
+
