@@ -63,3 +63,6 @@ body {width:759px;margin:auto;background:#fff;font:400 14px/1.5 Tahoma,Helvetica
 .pagepointer-nav li i.tri{position:absolute;top:7px;display:inline-block;border:4px dashed transparent;}
 .pagepointer-nav li.previous i.tri{left:2px;border-right:4px solid #18bbab;}
 .pagepointer-nav li.next i.tri{right:2px;border-left:4px solid #18bbab;}
+
+.error-info {font-size:16px;width:115px;position:relative;top:10px;left:300px;}
+.error-info i{display:inline-block;width:32px;height:32px;background-image: url(img/verify.png);background-repeat: no-repeat;}
